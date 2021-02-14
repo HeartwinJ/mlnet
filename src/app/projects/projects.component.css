@@ -3,3 +3,7 @@
   width: 100%;
   background-color: rgba(246,248,251,1);
 }
+
+.createButton {
+  font-size: 12px;
+}
