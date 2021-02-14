@@ -1,0 +1,35 @@
+<div class="d-flex flex-column h-100">
+  <app-header [title]="titleString"></app-header>
+  <div class="root flex-grow-1">
+    <div class="d-flex flex-column p-3">
+      <div class="d-flex align-items-center">
+        <span>Create New Project</span>
+        <a routerLink="/createProject" class="ml-auto bg-white createButton rounded border p-2">
+          <span class="mr-2 createText">Create New Project</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="rgba(0,116,228,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="mt-5 pt-5 mb-5 pb-5">
+        <form>
+          <div class="form-group">
+            <label for="projectTitle">Project Title</label>
+            <input type="text" id="projectTitle" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="projectDesc">Project Description</label>
+            <textarea id="projectDesc" class="form-control" rows="5"></textarea>
+          </div>
+          <div class="text-right">
+            <button class="nextBtn">Next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
