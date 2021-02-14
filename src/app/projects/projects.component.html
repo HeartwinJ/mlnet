@@ -13,10 +13,35 @@
         </span>
       </a>
       <div class="mt-5 pt-5 mb-5 pb-5">
-        <div class="d-flex align-items-center justify-content-center flex-column mt-5 pt-5 mb-5 pb-5">
+        <div *ngIf="myProjects.length == 0"
+          class="d-flex align-items-center justify-content-center flex-column mt-5 pt-5 mb-5 pb-5">
           <strong>Welcome!</strong>
           <span class="text-center">You do not have any projects yet.<br>Let's get started and create a new
             project.</span>
+        </div>
+        <div *ngIf="myProjects.length != 0" id="projectsList">
+          <div class="bg-white p-3 m-3" *ngFor="let project of myProjects">
+            <div class="row">
+              <div class="col-xs-12 col-lg-4">
+                <strong class="text-black text-small">{{project.projectName}}</strong><br>
+                <span class="text-small">Created: {{project.createdTime}}</span>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+                <span class="text-small">Training Started: {{project.trainingStarted}}</span><br>
+                <span class="text-small">Training Status</span>
+                <span *ngIf="project.trainingStatus == 1" class="bg-success rounded-pill p-1 ml-2 text-white text-small">Complete</span>
+                <span *ngIf="project.trainingStatus != 1" class="bg-danger rounded-pill p-1 ml-2 text-white text-small">Incomplete</span>
+              </div>
+              <div class="col-xs-12 col-lg-2">
+              <span class="text-small">Project Type</span>
+              <div class="bg-secondary rounded text-white text-center text-small p-1">{{project.projectType}}</div>
+              </div>
+              <div class="col-xs-12 col-lg-2">
+                <span class="text-small">Regression</span>
+                <div class="bg-primary rounded text-white text-center text-small p-1">{{project.regression}}</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

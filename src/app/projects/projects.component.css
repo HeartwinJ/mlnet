@@ -8,6 +8,18 @@
   cursor: pointer;
 }
 
+#projectsList {
+  color: rgba(164,168,181,1);
+}
+
+.text-black {
+  color: black;
+}
+
+.text-small {
+  font-size: 10 !important;
+}
+
 @media only screen and (max-width : 414px) {
   .createText {
     display: none;
