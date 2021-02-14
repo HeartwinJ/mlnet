@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
       regression:"Prediction"
     },
     {
-      projectName:"Hate Speech Project",
+      projectName:"Hate Speech Project 1",
       createdTime:"2020-01-20 3:15PM",
       trainingStarted:"2020-01-20 3:15PM",
       trainingStatus:0,
@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
       regression:"Prediction"
     },
     {
-      projectName:"Hate Speech Project",
+      projectName:"Hate Speech Project 2",
       createdTime:"2020-01-20 3:15PM",
       trainingStarted:"2020-01-20 3:15PM",
       trainingStatus:1,
@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
       regression:"Prediction"
     },
     {
-      projectName:"Hate Speech Project",
+      projectName:"Hate Speech Project 3",
       createdTime:"2020-01-20 3:15PM",
       trainingStarted:"2020-01-20 3:15PM",
       trainingStatus:0,

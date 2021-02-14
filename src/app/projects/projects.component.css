@@ -20,6 +20,11 @@
   font-size: 10 !important;
 }
 
+.form-check-input {
+  height: 30px;
+  width: 30px;
+}
+
 @media only screen and (max-width : 414px) {
   .createText {
     display: none;
