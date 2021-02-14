@@ -19,10 +19,6 @@
   color: white;
 }
 
-.nextBtn:disabled {
-  background-color: rgb(147, 186, 221);
-}
-
 @media only screen and (max-width : 414px) {
   .createText {
     display: none;
