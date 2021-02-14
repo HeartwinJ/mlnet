@@ -2,16 +2,19 @@
   <app-header [title]="titleString"></app-header>
   <div class="root flex-grow-1">
     <div class="d-flex flex-column p-3">
-      <a routerLink="/createProject" class="ml-auto bg-white createButton rounded border p-2">
-        <span class="mr-2 createText">Create New Project</span>
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="rgba(0,116,228,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-        </span>
-      </a>
+      <div class="d-flex align-items-center">
+        <span *ngIf="myProjects.length != 0">Available Projects</span>
+        <a routerLink="/createProject" class="ml-auto bg-white createButton rounded border p-2">
+          <span class="mr-2 createText">Create New Project</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="rgba(0,116,228,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </span>
+        </a>
+      </div>
       <div class="mt-5 pt-5 mb-5 pb-5">
         <div *ngIf="myProjects.length == 0"
           class="d-flex align-items-center justify-content-center flex-column mt-5 pt-5 mb-5 pb-5">
@@ -21,25 +24,34 @@
         </div>
         <div *ngIf="myProjects.length != 0" id="projectsList">
           <div class="bg-white p-3 m-3" *ngFor="let project of myProjects">
-            <div class="row">
-              <div class="col-xs-12 col-lg-4">
-                <strong class="text-black text-small">{{project.projectName}}</strong><br>
-                <span class="text-small">Created: {{project.createdTime}}</span>
-              </div>
-              <div class="col-xs-12 col-lg-4">
-                <span class="text-small">Training Started: {{project.trainingStarted}}</span><br>
-                <span class="text-small">Training Status</span>
-                <span *ngIf="project.trainingStatus == 1" class="bg-success rounded-pill p-1 ml-2 text-white text-small">Complete</span>
-                <span *ngIf="project.trainingStatus != 1" class="bg-danger rounded-pill p-1 ml-2 text-white text-small">Incomplete</span>
-              </div>
-              <div class="col-xs-12 col-lg-2">
-              <span class="text-small">Project Type</span>
-              <div class="bg-secondary rounded text-white text-center text-small p-1">{{project.projectType}}</div>
-              </div>
-              <div class="col-xs-12 col-lg-2">
-                <span class="text-small">Regression</span>
-                <div class="bg-primary rounded text-white text-center text-small p-1">{{project.regression}}</div>
-              </div>
+            <div class="form-check d-flex align-items-center">
+              <input type="form-check-input" type="checkbox" value="{{project.projectName}}"
+                id="{{'val_' + project.projectName}}">
+              <label class="form-check-label w-100 p-3" for="{{'val_' + project.projectName}}">
+                <div class="row">
+                  <div class="col-xs-12 col-lg-4">
+                    <strong class="text-black text-small">{{project.projectName}}</strong><br>
+                    <span class="text-small">Created: {{project.createdTime}}</span>
+                  </div>
+                  <div class="col-xs-12 col-lg-4">
+                    <span class="text-small">Training Started: {{project.trainingStarted}}</span><br>
+                    <span class="text-small">Training Status</span>
+                    <span *ngIf="project.trainingStatus == 1"
+                      class="bg-success rounded-pill p-1 ml-2 text-white text-small">Complete</span>
+                    <span *ngIf="project.trainingStatus != 1"
+                      class="bg-danger rounded-pill p-1 ml-2 text-white text-small">Incomplete</span>
+                  </div>
+                  <div class="col-xs-12 col-lg-2">
+                    <span class="text-small">Project Type</span>
+                    <div class="bg-secondary rounded text-white text-center text-small p-1">{{project.projectType}}
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-lg-2">
+                    <span class="text-small">Regression</span>
+                    <div class="bg-primary rounded text-white text-center text-small p-1">{{project.regression}}</div>
+                  </div>
+                </div>
+              </label>
             </div>
           </div>
         </div>
