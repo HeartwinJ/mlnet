@@ -6,3 +6,12 @@
 .headerText {
   color: rgba(124, 124, 125, 1);
 }
+
+.profileName {
+  font-size: 12px;
+}
+
+.profileText {
+  font-size: 10px;
+  color: white;
+}
