@@ -15,6 +15,10 @@
   background-color: rgba(0,233,255,1);
 }
 
+.round {
+  border-radius: 12px;
+}
+
 @media only screen and (max-width : 414px) {
   .sidebar {
     padding: 0;
