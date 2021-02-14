@@ -11,6 +11,8 @@ import { StorageComponent } from './storage/storage.component';
 import { ModelsComponent } from './models/models.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { SelectObjectiveComponent } from './select-objective/select-objective.component';
+import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SelectObjectiveComponent } from './select-objective/select-objective.co
     StorageComponent,
     ModelsComponent,
     CreateProjectComponent,
-    SelectObjectiveComponent
+    SelectObjectiveComponent,
+    LayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
