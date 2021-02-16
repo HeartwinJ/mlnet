@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  sidebarStyle = null;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSidebar() {
+    console.log('Toggle Sidebar');
+    if (this.sidebarStyle == null) {
+      this.sidebarStyle = {
+        'display': 'block'
+      }
+    } else {
+      this.sidebarStyle = null;
+    }
   }
 
 }

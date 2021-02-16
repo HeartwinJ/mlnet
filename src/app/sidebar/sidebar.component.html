@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="d-flex justify-content-center">
     <div class="d-flex align-items-center">
-      <div id="logo" class="p-2 mr-2">
+      <div id="logo" class="p-2">
         <svg viewBox="36.082 43.081 52.488 36.33" width="52.488" height="36.33">
           <path
             d="M 48.888 44.006 Q 52.09 42.157 55.292 44.006 L 64.897 49.551 Q 68.098 51.4 68.098 55.097 L 68.098 66.188 Q 68.098 69.885 64.897 71.733 L 55.292 77.279 Q 52.09 79.127 48.888 77.279 L 39.283 71.733 Q 36.082 69.885 36.082 66.188 L 36.082 55.097 Q 36.082 51.4 39.283 49.551 Z"
@@ -12,7 +12,12 @@
             style="fill: rgb(0, 233, 255); stroke-width: 3px; stroke: rgb(0, 0, 0);"></path>
         </svg>
       </div>
-      <span id="companyName" class="text-white">COMPANY</span>
+      <span id="companyName" class="text-white mr-3" [ngStyle]="sidebarStyle">COMPANY</span>
+    </div>
+  </div>
+  <div class="d-flex flex-column align-items-center">
+    <div id="sidebarToggle" class="mt-4 mb-4" (click)="toggleSidebar()">
+      <img height="24px" width="24px" src="assets/icons/menu.svg">
     </div>
   </div>
   <div class="d-flex flex-column align-items-center">
@@ -30,7 +35,7 @@
               <line x1="3" y1="18" x2="3.01" y2="18"></line>
             </svg>
           </span>
-          <span class="routerLabel">My Projects</span>
+          <span class="routerLabel" [ngStyle]="sidebarStyle">My Projects</span>
         </a>
       </div>
       <div class="p-3">
@@ -42,7 +47,7 @@
               <polyline points="13 11 9 17 15 17 11 23"></polyline>
             </svg>
           </span>
-          <span class="routerLabel">Storage</span>
+          <span class="routerLabel" [ngStyle]="sidebarStyle">Storage</span>
         </a>
       </div>
       <div class="p-3">
@@ -55,7 +60,7 @@
               </path>
             </svg>
           </span>
-          <span class="routerLabel">Models</span>
+          <span class="routerLabel" [ngStyle]="sidebarStyle">Models</span>
         </a>
       </div>
     </div>

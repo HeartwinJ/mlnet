@@ -4,6 +4,10 @@
   padding: 2rem;
 }
 
+#sidebarToggle {
+  display: none;
+}
+
 .sideIcon {
   text-decoration: none;
   color: gray;
@@ -23,11 +27,20 @@
   .sidebar {
     padding: 0;
   }
+  #sidebarToggle {
+    display: block;
+  }
   #logo {
     margin: none;
   }
   #companyName {
     display: none;
+  }
+  .sideIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .routerLabel {
     display: none;
